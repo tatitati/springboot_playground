@@ -1,11 +1,21 @@
 package meeee.theater.control
 
+import meeee.theater.service.BookingService
+import meeee.theater.service.Theater
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.servlet.ModelAndView
 
 @Controller
 class MainController {
+
+    @Autowired
+    lateinit var theaterService: Theater
+
+    @Autowired
+    lateinit var bookingService: BookingService
 
     @RequestMapping("showHellowWorld")
     fun helloWorld(): ModelAndView
@@ -18,6 +28,16 @@ class MainController {
     {
         return ModelAndView("seatBooking", "bean", CheckAvailabilityBackingBean())
     }
+
+    @RequestMapping("checkAvailability", method=arrayOf(RequestMethod.POST))
+    fun checkAvailability(bean: CheckAvailabilityBackingBean): ModelAndView {
+        val selectedSeat = theaterService.find(bean.selectedSeatNum, bean.selectedSeatRow)
+        val isFree = bookingService.isSeatFree(selectedSeat)
+        bean.result = "Seat $selectedSeat is" + if(isFree) "available" else "booked"
+
+        return ModelAndView("seatBooking", "bean", bean)
+    }
+
 }
 
 class CheckAvailabilityBackingBean{

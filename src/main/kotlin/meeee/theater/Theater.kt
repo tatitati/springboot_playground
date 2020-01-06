@@ -1,2 +1,0 @@
-package meeee.theater
-
