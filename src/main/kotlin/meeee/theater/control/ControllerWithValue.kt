@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.servlet.ModelAndView
 
 @RestController
-class MyRestController {
+class ControllerWithValue {
     // DI properties
     @Value("\${coach.name}")
     lateinit var coachName: String
