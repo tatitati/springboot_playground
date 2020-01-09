@@ -4,7 +4,7 @@ import meeee.theater.domain.Seat
 import org.springframework.stereotype.Service
 
 @Service
-class BookingService() {
+class ServiceBooking() {
 
     fun isSeatFree(seat: Seat): Boolean {
         return true

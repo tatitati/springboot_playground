@@ -3,7 +3,7 @@ package meeee.theater.service;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyFortuneService implements FortuneService {
+public class ServiceHappyFortune implements ServiceFortune {
 
 	@Override
 	public String getFortune() {

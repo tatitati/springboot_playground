@@ -1,6 +1,6 @@
 package meeee.theater.service;
 
-public interface FortuneService {
+public interface ServiceFortune {
 
 	public String getFortune();
 	

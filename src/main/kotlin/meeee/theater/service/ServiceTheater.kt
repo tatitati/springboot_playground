@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service
 import java.math.BigDecimal
 
 @Service
-class Theater {
+class ServiceTheater {
 
     private val hiddenSeats = mutableListOf<Seat>()
 
