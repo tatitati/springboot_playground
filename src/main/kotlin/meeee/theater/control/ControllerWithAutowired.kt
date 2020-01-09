@@ -1,9 +1,8 @@
 package meeee.theater.control
 
-import meeee.theater.service.BookingService
-import meeee.theater.service.Theater
+import meeee.theater.service.ServiceBooking
+import meeee.theater.service.ServiceTheater
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
@@ -12,12 +11,11 @@ import org.springframework.web.servlet.ModelAndView
 @Controller
 class ControllerWithAutowired {
 
-    // DI services
     @Autowired
-    lateinit var theaterService: Theater
+    lateinit var theaterService: ServiceTheater
 
     @Autowired
-    lateinit var bookingService: BookingService
+    lateinit var bookingService: ServiceBooking
 
     @RequestMapping("showHellowWorld")
     fun helloWorld(): ModelAndView
