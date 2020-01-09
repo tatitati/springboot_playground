@@ -13,12 +13,12 @@ class MoodyConfig {
     }
 
     @Bean
-    fun getBeanMoodyHappy(): Moody {
+    fun getBeanMoodyHappy(): MoodyHappy {
         return MoodyHappy()
     }
 
     @Bean
-    fun getBeanMoodySad(): Moody {
+    fun getBeanMoodySad(): MoodySad {
         return MoodySad()
     }
 }
