@@ -1,4 +1,4 @@
-package meeee.DiStudio
+package meeee.BeansStudio
 
 class MyDI(val injected: Moody) {
 

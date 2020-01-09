@@ -1,4 +1,4 @@
-package meeee.DiStudio
+package meeee.BeansStudio
 
 
 class MoodyClient(val injectedMoody: Moody) {

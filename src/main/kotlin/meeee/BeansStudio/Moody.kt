@@ -1,4 +1,4 @@
-package meeee.DiStudio
+package meeee.BeansStudio
 
 interface Moody {
     fun shout(): String

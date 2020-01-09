@@ -1,11 +1,11 @@
-package meeee.DiStudio
+package meeee.BeansStudio
 
 import org.springframework.stereotype.Component
 
 @Component
-class MoodyHappy: Moody {
+class MoodySad: Moody{
     override fun shout(): String {
-        return "im Moody happy"
+        return "im Moody sad"
     }
 
 }
