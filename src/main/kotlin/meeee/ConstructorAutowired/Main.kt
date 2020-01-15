@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 import javax.annotation.PostConstruct
 
 
-// I have some beans defined in MoodyConfig, and I want to receive an specific
+// I check that MyService is constructed using the constructor that receives injected variables
 
 @SpringBootApplication
 @RestController
