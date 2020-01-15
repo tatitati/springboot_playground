@@ -1,5 +1,8 @@
 package meeee.ConstructorAutowired
 
+import meeee.Moody
+import meeee.MoodyHappy
+import meeee.MoodySad
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

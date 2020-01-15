@@ -1,6 +1,7 @@
 package meeee.AutowiredStudio
 
-import org.springframework.beans.factory.annotation.Qualifier
+import meeee.MoodyHappy
+import meeee.MoodySad
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

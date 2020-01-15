@@ -1,5 +1,7 @@
 package meeee.BeansStudio
 
+import meeee.MoodyHappy
+import meeee.MoodySad
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
@@ -7,12 +9,12 @@ import org.springframework.context.annotation.Configuration
 class MoodyConfig {
 
     @Bean
-    fun getBeanMoodyHappy(): MoodyHappy{
+    fun getBeanMoodyHappy(): MoodyHappy {
         return MoodyHappy()
     }
 
     @Bean
-    fun getBeanMoodySad(): MoodySad{
+    fun getBeanMoodySad(): MoodySad {
         return MoodySad()
     }
 }

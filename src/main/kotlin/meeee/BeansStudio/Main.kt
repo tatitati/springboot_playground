@@ -1,5 +1,6 @@
 package meeee.BeansStudio
 
+import meeee.Moody
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
@@ -16,7 +17,7 @@ class Main {
     @PostConstruct
     fun initialize() {
         val context = AnnotationConfigApplicationContext(MoodyConfig::class.java)
-        val happy: Moody  = context.getBean("getBeanMoodySad", Moody::class.java)
+        val happy: Moody = context.getBean("getBeanMoodySad", Moody::class.java)
         println(happy.shout()) // im Moody sad
     }
 }
