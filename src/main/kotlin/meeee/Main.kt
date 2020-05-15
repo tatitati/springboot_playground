@@ -16,7 +16,7 @@ import javax.annotation.PostConstruct
 @ComponentScan("com.simplybusiness.dna.common.spring.dynamo")
 class Config {
     @Bean
-    fun item(): DynamoService? {
+    fun item(): DynamoService {
         return DynamoService()
     }
 }
