@@ -20,10 +20,15 @@ configurations {
 	}
 }
 
+val sourcesJar = task<Jar>("sourcesJar") {
+	from(sourceSets["main"].allSource)
+	archiveClassifier.set("sources")
+}
+
 repositories {
 	mavenCentral()
 	jcenter()
-	maven ("https://bnw-registry.simplybusiness.io/repository/sb-dna-maven-snapshot/")
+	maven ("http://localhost:8081/repository/myrepository_for_snapshot/")
 	maven ("https://s3-us-west-2.amazonaws.com/dynamodb-local/release")
 }
 
@@ -38,13 +43,7 @@ dependencies {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
 
-	implementation("com.simplybusiness.dna.common:dynamo:1.0.0-20200514.165556-3")
-
-	// aws
-//	implementation("com.amazonaws:aws-java-sdk-dynamodb:1.11.706")
-//	implementation("com.amazonaws:aws-java-sdk-sts:1.11.634")
-//	implementation("software.amazon.awssdk:aws-sdk-java:2.10.1")
-//	implementation("com.amazonaws:DynamoDBLocal:1.11.477")
+	implementation("com.simplybusiness.dna.common:dynamo:1.0.0-SNAPSHOT")
 }
 
 tasks.withType<Test> {

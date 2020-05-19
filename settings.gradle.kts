@@ -1,1 +1,2 @@
-rootProject.name = "theater"
+rootProject.name = "playground"
+
